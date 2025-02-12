@@ -18,18 +18,27 @@ function getComputerChoice() {
         return "rock"; 
     }}
 let computerChoice = getComputerChoice();
+console.log ("the computer played " + getComputerChoice())
 
 let humanChoice = prompt("rock,paper or scissors?")
 
-function getHumanChoice(choice) {
-    return choice;
-}
+
+console.log ("you played " + humanChoice)
 
 function playRound() {
 if (computerChoice == humanChoice) {
     return "same"
-} else {
-    return "not same"
-}
+} else if (computerChoice == "paper" && humanChoice == "rock") {
+    return "you lose 1!";
+} else if (computerChoice == "scissors" && humanChoice == "rock") {
+    return "you win 1!";
+} else if (computerChoice == "scissors" && humanChoice == "paper") {
+    return "you lose 2!";
+} else if (computerChoice == "rock" && humanChoice == "paper") {
+    return "you win 2!";
+} else if (computerChoice == "rock" && humanChoice == "scissors") {
+    return "you lose 3!";
+} else (computerChoice == "paper" && humanChoice == "scissors") 
+    return "you win 3!";
 }
 console.log(playRound())
