@@ -9,27 +9,42 @@
 // 4. Each this number will be inputted in a unique function based on the player's variable choice
 // 5. The function will determine, winner,loser and draw
 
-function getComputerChoice() {
-    if (Math.random() > 0.66) {
-        return "scissors";
-        let 
-    } else if ((Math.random() < 0.33)) {
-        return "paper";choice
-    } else {
-        return "rock"; 
-    }}
-let computerChoice = getComputerChoice();
-console.log ("the computer played " + computerChoice)
+// function getComputerChoice() {
+//     if (Math.random() > 0.66) {
+//         return "scissors";
+//         let 
+//     } else if ((Math.random() < 0.33)) {
+//         return "paper";choice
+//     } else {
+//         return "rock"; 
+//     }}
+// let computerChoice = getComputerChoice();
+// console.log ("the computer played " + computerChoice)
 
-let humanChoice = prompt("rock,paper or scissors?").toLowerCase()
+// let humanChoice = prompt("rock,paper or scissors?").toLowerCase()
 
 
-console.log ("you played " + humanChoice)
-
+// console.log ("you played " + humanChoice)
+let humanScore = 0;
+let computerScore =0;
+for (var i = 0; i <= 5; i++) {
 function playGame() {
+    function getComputerChoice() {
+        if (Math.random() > 0.66) {
+            return "scissors";
+        } else if ((Math.random() < 0.33)) {
+            return "paper";
+        } else {
+            return "rock"; 
+        }}
+    let computerChoice = getComputerChoice();
+    console.log ("the computer played " + computerChoice)
+    
+    let humanChoice = prompt("rock,paper or scissors?").toLowerCase()
+    
+    
+    console.log ("you played " + humanChoice)
     function playRound() {
-        let humanScore = 0;
-        let computerScore =0;
         if (computerChoice == humanChoice) {
             console.log("The score is " + humanScore + " to " + computerScore);
             return "It's a tie!"
@@ -61,3 +76,4 @@ function playGame() {
 return playRound();
 }
 console.log(playGame());
+}
