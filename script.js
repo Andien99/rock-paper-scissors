@@ -11,17 +11,25 @@
 function getComputerChoice() {
     if (Math.random() > 0.66) {
         return "scissors";
+        let 
     } else if ((Math.random() < 0.33)) {
-        return "paper";
+        return "paper";choice
     } else {
         return "rock"; 
     }}
-console.log(getComputerChoice())
+let computerChoice = getComputerChoice();
 
-let choice = prompt("rock,paper or scissors?")
+let humanChoice = prompt("rock,paper or scissors?")
+
 function getHumanChoice(choice) {
     return choice;
 }
-console.log(getHumanChoice(choice))
 
-
+function playRound() {
+if (computerChoice == humanChoice) {
+    return "same"
+} else {
+    return "not same"
+}
+}
+console.log(playRound())
