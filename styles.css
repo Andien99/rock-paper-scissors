@@ -1,0 +1,23 @@
+#scoreBoard {
+    background-color: aqua;
+    display:flex;
+    justify-content: center;
+    gap: 32px
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    padding: 32px;
+}
+
+.option {
+    font-size: 32px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    gap: 48px   
+}

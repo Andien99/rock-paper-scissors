@@ -13,16 +13,26 @@
 let humanScore = 0;
 let computerScore = 0;
 const scoreBoard = document.querySelector("#scoreBoard")
-let displayHumanScore = document.createElement("p");
+let displayHumanScore = document.createElement("h1");
     displayHumanScore.textContent = "Player 1: " + humanScore
     scoreBoard.appendChild(displayHumanScore);
-let displayComputerScore = document.createElement("p");
+
+let displayComputerScore = document.createElement("h1");
     displayComputerScore.textContent = "CPU: " + computerScore
     scoreBoard.appendChild(displayComputerScore);
-// let computerChoice = getComputerChoice();
-// console.log ("the computer played " + computerChoice)  
-// let humanChoice = prompt("rock,paper or scissors?").toLowerCase()
+  
 
+let displayHumanSelection = document.querySelector("#humanSelection");
+    displayHumanSelection.textContent = "What will you choose?";
+
+let displayComputerSelection = document.querySelector("#computerSelection");
+    displayComputerSelection.textContent = "What will the CPU choose?";
+
+
+
+const result = document.querySelector("#result")
+    result.appendChild(displayComputerSelection);
+    result.appendChild(displayHumanSelection);
 let computerChoice = "";
 getComputerChoice()
 
@@ -45,14 +55,14 @@ const buttons = document.querySelectorAll("button");
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
         console.log("Player chose " + button.id);
-        let humanChoice = button.id
+        displayHumanSelection.textContent = "You chose " + button.id
+        displayComputerSelection.textContent = "The CPU chose " + computerChoice
         console.log("CPU played " + computerChoice)
         playRound(button.id, computerChoice);
         getComputerChoice()
     })
 });
 
-    // console.log ("you played " + humanChoice)
     function playRound(humanChoice, computerChoice) {
         if (computerChoice == humanChoice) {
             console.log("The score is " + humanScore + " to " + computerScore);
